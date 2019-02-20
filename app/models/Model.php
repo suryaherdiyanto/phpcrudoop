@@ -50,7 +50,6 @@ class Model {
     }
 
     public function delete(int $id){
-        var_dump($id);
         return $this->pdo->getConnection()->exec('delete from '.$this->table.' where '.$this->primary_key.' = '.$id);
     }
 }
